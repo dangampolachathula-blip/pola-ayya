@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <script>
+    var password = "1234";
+    var input = prompt("මෙම පිටුව බැලීමට Password එක ඇතුල් කරන්න:");
+    if (input !== password) {
+      document.write("<h2 style='color:black; text-align:center;'>❤️හැමොම අතරේ බෙදා ගෙන ජිවිතේ ජය ගන්න❤️ <br> 🔥හීන පස්සේ දුවන්න 🔥 <br> 🍻යලුව අතර Share කරල Youtube chanel එක Subscriber කරන්න✅</h2>");
+      throw new Error("Access Denied");
+    }
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🔥 චමුදිත අයියා 🔥</title>
+  <style>
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Poppins", "Segoe UI", Arial, sans-serif;
+      background:linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
+      background-size: 400% 400%;
+      color:#111;
+      padding-bottom:60px;
+      -webkit-font-smoothing:antialiased;
+      perspective:1200px; /* 3D look */
+      animation: gradientBG 12s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* 🔥 Banner with animated gradient */
+    header{
+      text-align:center;
+      padding:30px 20px;
+      color:white;
+      background:rgba(0,0,0,0.4);
+      background-size:600% 600%;
+      animation:gradientShift 12s ease infinite;
+      box-shadow:0 4px 15px rgba(0,0,0,0.25);
+    }
+    @keyframes gradientShift {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    header h1{font-size: 2.8rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      animation: pop 2s infinite alternate;}
+    
+      @keyframes pop {
+      from {transform: scale(1);}
+      to {transform: scale(1.05);}
+    }
+    header p{opacity:0.9;margin-top:6px;font-weight:500;}
+
+    /* 🔥 Navigation */
+    nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:12px;margin:10px auto;max-width:1100px}
+    nav a{background:#222;color:white;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;transition:transform 0.3s,background 0.3s}
+    nav a.secondary{background:#ff6b6b}
+    nav a:hover{transform:scale(1.08);background:#444}
+
+    /* 🔥 Hero */
+    .hero{max-width:1100px;margin:18px auto;text-align:center;padding:14px 18px}
+    .hero h2{margin-bottom: 6px}
+
+    /* ===== Countdown ===== */
+    .countdown-wrap{max-width:1100px;margin:12px auto;padding:18px;border-radius:14px;background:linear-gradient(90deg,#2b6df6,#7a3cff);color:#fff;box-shadow:0 16px 30px rgba(30,40,80,0.15)}
+    .countdown-title{text-align:center;font-size:1.2rem;margin-bottom:12px}
+    .countdown-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .count-item{min-width:130px;flex:1 1 150px;background:rgba(255,255,255,0.06);padding:18px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.08)}
+    .count-number{font-size:2.4rem;font-weight:700;animation:bounce 2.5s infinite}
+    .count-label{opacity:0.9}
+
+    /* ===== Browse cards ===== */
+    .browse{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;padding:0 12px}
+    .browse-card{
+      border-radius:16px;padding:32px 20px;text-align:center;
+      cursor:pointer;font-weight:700;font-size:1.1rem;
+      box-shadow:0 10px 20px rgba(20,20,50,0.08);
+      transition:transform 0.35s cubic-bezier(.25,.8,.25,1), box-shadow 0.35s ease;
+      transform-style:preserve-3d;
+    }
+    .browse-card:hover{
+      transform:translateY(-12px) rotateX(6deg) rotateY(-6deg) scale(1.05);
+      box-shadow:0 25px 45px rgba(20,20,50,0.15);
+    }
+    .papers{border-left:6px solid #ff6b6b;background:linear-gradient(135deg,#ffecec,#fff);}
+    .notes{border-left:6px solid #42e695;background:linear-gradient(135deg,#ecfff5,#fff);}
+    .markings{border-left:6px solid #4776e6;background:linear-gradient(135deg,#ecefff,#fff);}
+    .discussions{border-left:6px solid #ffb347;background:linear-gradient(135deg,#fff5e9,#fff);}
+
+    /* ===== Content list area ===== */
+    .content-area{max-width:1100px;margin:26px auto;padding:0 12px}
+    .list-card{
+      background:transparent;border-radius:12px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;padding:0;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      opacity:0; transform:translateY(20px); animation:fadeUp 0.6s forwards;
+    }
+    .list-card:hover{
+      transform:translateY(-6px) rotateX(3deg) rotateY(3deg);
+      box-shadow:0 18px 28px rgba(0,0,0,0.12);
+    }
+    .list-card:nth-child(1){animation-delay:0.1s}
+    .list-card:nth-child(2){animation-delay:0.2s}
+    .list-card:nth-child(3){animation-delay:0.3s}
+    .list-card:nth-child(4){animation-delay:0.4s}
+
+    .list-left{
+      background:#ffffff;border-radius:12px;padding:18px 18px;flex:1;margin-right:14px;
+      display:flex;flex-direction:column;gap:6px;box-shadow:0 12px 22px rgba(0,0,0,0.06);
+      border-left:8px solid rgba(0,0,0,0.12);
+    }
+    .list-left .unit-title{font-weight:800;letter-spacing:0.4px;}
+    .list-left .unit-sub{opacity:0.8;font-size:0.95rem;margin-top:3px}
+
+    .pdf-btn, .link-btn{
+      width:120px;min-width:100px;height:48px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;
+      box-shadow:0 10px 20px rgba(0,0,0,0.06);text-decoration:none;font-weight:700;
+      border:1px solid rgba(0,0,0,0.1);transition:all 0.25s ease;
+    }
+    .pdf-btn{color:#b71c1c;}
+    .link-btn{color:#1a237e;}
+    .pdf-btn:hover{transform:scale(1.1) rotate(-2deg);background:#ffebee;box-shadow:0 10px 22px rgba(183,28,28,0.25);}
+    .link-btn:hover{transform:scale(1.1) rotate(2deg);background:#e8eaf6;box-shadow:0 10px 22px rgba(26,35,126,0.25);}
+
+    @media (max-width:640px){
+      .list-card{flex-direction:column;align-items:stretch}
+      .list-left{margin-right:0;margin-bottom:10px}
+      .pdf-btn, .link-btn{width:100%;height:48px}
+    }
+
+    .hidden{display:none}
+    .back-link{display:inline-block;margin-bottom:10px;color:#444;text-decoration:underline;cursor:pointer}
+    .section-title{font-size:1.1rem;margin-bottom:10px;font-weight:700}
+    .small-note{font-size:0.95rem;color:#555;margin-top:6px}
+    
+
+    /* ==== Animations ==== */
+    @keyframes fadeUp{to{opacity:1; transform:translateY(0);}}
+    @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px) scale(1.05);}}
+    
+    /* ✨ Main Content */
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h2.subject {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      box-shadow: inset 0px 0px 8px #ff4b2b;
+    }
+    .card {
+      background: #fff;
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      flex-wrap: wrap;
+    }
+    footer{
+      background:#111;
+      color:#eee;
+      text-align:center;
+      padding:18px;
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      font-size:0.95rem;
+      letter-spacing:0.3px;
+      box-shadow:0 -4px 12px rgba(0,0,0,0.25);
+    }
+    footer span{color:#ff6b6b;font-weight:600}
+    footer a{color:#42e695;text-decoration:none;font-weight:600}
+    footer a:hover{text-decoration:underline}
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- 🔥 Banner -->
+  <header>
+    <h1>🔥 චමුදිත අයියා 🔥</h1>
+    <p>Past Papers | Notes | Marking Schemes | Discussions</p>
+  </header>
+
+  <!-- 🔥 Nav Bar -->
+  <nav>
+    <a href="#" class="secondary">Home</a>
+    <a href="#">Paper Hub</a>
+    <a href="#">Note Hub</a>
+    <a href="#">Marking</a>
+    <a href="#">Discussions</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>ඔයාගෙ A/L Online මිතුරා 😍</h2>
+    <p>Click any category to view its items.</p>
+  </div>
+
+  <!-- countdown -->
+  <div class="countdown-wrap" aria-live="polite">
+    <div class="countdown-title">Countdown to 2025 A/L Exams</div>
+    <div class="countdown-grid">
+      <div class="count-item"><div class="count-number" id="days">--</div><div class="count-label">Days</div></div>
+      <div class="count-item"><div class="count-number" id="hours">--</div><div class="count-label">Hours</div></div>
+      <div class="count-item"><div class="count-number" id="minutes">--</div><div class="count-label">Minutes</div></div>
+      <div class="count-item"><div class="count-number" id="seconds">--</div><div class="count-label">Seconds</div></div>
+      
+    </div>
+  </div>
+
+  <!-- Browse Cards -->
+  <div class="browse" id="browseContainer">
+    <div class="browse-card papers" data-cat="past_paper">📄 Past Paper</div>
+    <div class="browse-card markings" data-cat="marking_scheme">✅ Marking Scheme</div>
+    <div class="browse-card notes" data-cat="note">📝 Note</div>
+    <div class="browse-card discussions" data-cat="discussion">💬 Past Paper Discussion</div>
+  </div>
+
+  <!-- Content area -->
+  <div class="content-area">
+    <div id="contentPlaceholder" class="">
+      <div class="section-title">Choose a category above to view files</div>
+      <div class="small-note">Example: Past Paper lists will show units and a PDF button like in your screenshot.</div>
+    </div>
+
+    <div id="listView" class="hidden">
+      <div class="back-link" id="backBtn">&larr; Back to categories</div>
+      <div class="section-title" id="listTitle">Category</div>
+      <div id="listItems"></div>
+    </div>
+  </div>
+
+  <!-- ===== JS: data + interactions ===== -->
+  <script>
+    const data = {
+      past_paper: {
+        title: "Past Paper",
+        items: [
+          { id: "unit01", title: "2011 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/152MdNEybtW2ORz3iKgDllxagjVgS4bgK/view?usp=drive_link" },
+          { id: "unit01", title: "2012 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1C5aTUVVikmiQZysUMJThKuCyf5riTcU3/view?usp=drive_link" },
+          { id: "unit01", title: "2013 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1pL2UGEmYwPB-CjOCMwMOIflHUy4AGRuv/view?usp=drive_link" },
+          { id: "unit01", title: "2014 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1Bll7NC9hS_GT5ffhHdakGDMN9u9qE-8L/view?usp=drive_link" },
+          { id: "unit01", title: "2015 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1M5Mlc1PKL3G0rwEOy5HJDZb_D8V6puih/view?usp=drive_link" },
+          { id: "unit01", title: "2016 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/13FBQnO1jCZ38F_UOf08eWhnaImx1-qNf/view?usp=drive_link" },
+          { id: "unit01", title: "2017 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1jZHxtvcluhs12YDcYybRFMuKAhTCCj2k/view?usp=drive_link" },
+          { id: "unit01", title: "2018 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1CPiXnqD8j5HUxREjCONqtoYCw8yt2A4V/view?usp=drive_link" },
+          { id: "unit01", title: "2019 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/11V2guP70pnJ-RotoDNqQIj9SSQJNkcWS/view?usp=drive_link" },
+          { id: "unit01", title: "2020 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1NxxkFrFKnvqEde32-eVcQHZG-0hFqGZR/view?usp=drive_link" },
+          { id: "unit01", title: "2021 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1uefwQfs1DARVefOdUZa0NOaxeaC6hYo3/view?usp=drive_link" },
+          { id: "unit01", title: "2022 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1NeQyPXz03uhMpAiZwDLVe_y4bKEch-aA/view?usp=drive_link" },
+          { id: "unit01", title: "2023 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/14BnY2KkQYHTZK14rjPH_gMpk7sb2_6zi/view?usp=drive_link" },
+          { id: "unit01", title: "2024 - PAST PAPER (I)(II)", pdf: "https://drive.google.com/file/d/1Bvdds-8_LdQnVrGP0OpTpOf9VMOnxKWK/view?usp=drive_link" }
+        ]
+      },
+      marking_scheme: {
+        title: "Marking Scheme",
+        items: [
+          { id: "ms01", title: "2011 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1NUzk75IfO8vB_dYqTLqC9Rv5EpGxFXKr/view?usp=sharing" },
+          { id: "ms01", title: "2012 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1cmcaiCBWeYOBVCGByl2-udpk_m8fgRC4/view?usp=drive_link" },
+          { id: "ms01", title: "2013 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1AS6A6FrQnDSki7YB5DWaamKwryYsLIUM/view?usp=drive_link" },
+          { id: "ms01", title: "2014 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1aw9gS3DDT6mam_IHsxdtQewQb5Y_0-yL/view?usp=drive_link" },
+          { id: "ms01", title: "2015 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1CqtCCe477IrA6Xu5fFbVVduQizk-g0E8/view?usp=drive_link" },
+          { id: "ms01", title: "2016 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1YPxQYagPIj3eotgb8lxp501xIt2_UG9l/view?usp=drive_link" },
+          { id: "ms01", title: "2017 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1jP1Or96cLbCJqDGtsgd55eIvMTxIMU3l/view?usp=drive_link" },
+          { id: "ms01", title: "2018 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1Sp4tM7eFn8KkyDgoulvzgybU8egF6T2q/view?usp=drive_link" },
+          { id: "ms01", title: "2019 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1odmPSaHGrH4BK_AOn-CMJla0k20l2Xgr/view?usp=drive_link" },
+          { id: "ms01", title: "2020 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1Tk1AYGzEUabRbZdbwsL8JZTBKrCMWk2-/view?usp=drive_link" },
+          { id: "ms01", title: "2020 - Review (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1BWAxOx-Ui094R9JKkyB4bQtUSR5f_5ml/view?usp=drive_link" },
+          { id: "ms01", title: "2021 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1MAuMnsr30L4y6jh1HibvY1ugJa4hxbUY/view?usp=drive_link" },
+          { id: "ms01", title: "2021 - Review (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1hlCPOwvn-Ed7YXW0WsVqtx9rRTMXLxtV/view?usp=drive_link" },
+          { id: "ms01", title: "2022 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1Fdo7SED3r0AEVCs9wVnt9uuTY606NpyU/view?usp=drive_link" },
+          { id: "ms01", title: "2022 - Review (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1R_5y0Y1AoxmNiUNSOp0dClwHCmD-kbXN/view?usp=drive_link" },
+          { id: "ms01", title: "2023 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1TNN9_KO0zq5l3-h61QzjFSlSUq_9UPv8/view?usp=drive_link" },
+          { id: "ms01", title: "2023 - Review (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1V2jfKthGmiIpShH3YqipNa4BVECWS0e8/view?usp=drive_link" },
+          { id: "ms01", title: "2024 - MARKING (STR/ESSAY)", pdf: "https://drive.google.com/file/d/1Fmqp9mwa5cPg6s33KUUKmS6sNJveiOns/view?usp=drive_link" },
+          { id: "ms01", title: "2024 - Review (MCQ)", pdf: "https://drive.google.com/file/d/1mpzp93_iQlrieu4skdFmS5M43zTvN4DL/view?usp=drive_linke_link" },
+        ]
+      },
+      note: {
+        title: "Note",
+        items: [
+          { id: "note01", title: "2011--2024 | MCQ ANALYSIS", pdf: "https://drive.google.com/file/d/12joRaif4oyXrAqP2jAQhSupcaPizzzql/view?usp=drive_link" },
+          { id: "note02", title: "2011--2024 | STR/ESSAY", pdf: "https://drive.google.com/file/d/1gUekhI0LB4iTykI6UQ_w0V1x9FdRoWp9/view?usp=drive_link" },
+          { id: "note03", title: "2013--2021 | MCQ IN PARTS", pdf: "https://drive.google.com/file/d/1hmPKvWyY-_j6jQBQgWpc7N4NONCuJRdc/view?usp=drive_link" }
+        ]
+      },
+      discussion: {
+        title: "Past Paper Discussion",
+        items: [
+          { id: "dis01", title: "Discussion: 2011 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PL9jtyyiCWL6zlGkxVQOzo2kWNHj8Yjfyv&si=xAyaLtfjbjUSdvze" },
+          { id: "dis01", title: "Discussion: 2012 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PL9jtyyiCWL6xRY3LKS1RmwnPV85tVcUWn&si=XwRtubNLJBseR0Au" },
+          { id: "dis01", title: "Discussion: 2013 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PL9jtyyiCWL6xJ_Wc_Gn7CJappMmwABPXW&si=0vNBtMYBxu1btglQ" },
+          { id: "dis01", title: "Discussion: 2014 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PL9jtyyiCWL6yP4Ir2d0hC4LChh6FIb0Zr&si=-oS5WVfxZZ943jEb" },
+          { id: "dis01", title: "Discussion: 2015 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiFM2tsXRQrc23iPb_d8pS_F&si=27_UQ0UaPOwO-i0_" },
+          { id: "dis01", title: "Discussion: 2016 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiGftX561nQevxPYLnIcD14C&si=QHF5WOd4haZWp35x" },
+          { id: "dis01", title: "Discussion: 2017 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiHInhdoDEQ0uIQE9C4qYtAC&si=OF-ZnU-LdETw7Cju" },
+          { id: "dis01", title: "Discussion: 2018 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiEB8xRtfb8y9wbULfpv1SHp&si=ZFlTIE0v0C5t0Ixy" },
+          { id: "dis01", title: "Discussion: 2019 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiGRQwk3j-1rurqsp-cJ8ULd&si=d4DQCPvYWgH7__IZ" },
+          { id: "dis01", title: "Discussion: 2020 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiHuJdwwkxJCq5cKOrSyzfvm&si=8hi9cVh9oUYyfYeS" },
+          { id: "dis01", title: "Discussion: 2021 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiFlm5qfhhjWXm7wi0ntnkkk&si=MWWwXovvmC61ZHTv" },
+          { id: "dis01", title: "Discussion: 2022 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiEb6pO6-h3qTJ-uhceaXkjt&si=se4TSpnDkspqSsRU" },
+          { id: "dis01", title: "Discussion: 2023 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiFyoF6Qt3P9P8iZVAktfDt6&si=316XtAGmbxHRL8T3" },
+          { id: "dis01", title: "Discussion: 2024 (MCQ/STR/ESSAY)", link: "https://youtube.com/playlist?list=PLCcsxrMghaiGh3HpxqHN5Qnx8T6bzslMv&si=Mg7BQ0hScaiZeQeF" },
+        ]
+      }
+    };
+
+    const browseContainer = document.getElementById('browseContainer');
+    const listView = document.getElementById('listView');
+    const contentPlaceholder = document.getElementById('contentPlaceholder');
+    const listItemsEl = document.getElementById('listItems');
+    const listTitleEl = document.getElementById('listTitle');
+    const backBtn = document.getElementById('backBtn');
+
+    browseContainer.addEventListener('click', (e)=>{
+      const card = e.target.closest('.browse-card');
+      if(!card) return;
+      const cat = card.dataset.cat;
+      if(!cat || !data[cat]) return;
+      showList(cat);
+      setTimeout(()=> document.getElementById('listView').scrollIntoView({behavior:'smooth'}), 80);
+    });
+
+    backBtn.addEventListener('click', ()=>{
+      hideList();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+
+    function showList(cat){
+      const category = data[cat];
+      listTitleEl.textContent = category.title;
+      listItemsEl.innerHTML = "";
+
+      category.items.forEach((it)=>{
+        const wrapper = document.createElement('div');
+        wrapper.className = 'list-card';
+
+        const left = document.createElement('div');
+        left.className = 'list-left';
+        const title = document.createElement('div');
+        title.className = 'unit-title';
+        title.textContent = it.title;
+        const sub = document.createElement('div');
+        sub.className = 'unit-sub';
+        sub.textContent = (cat === 'discussion') ? "Click link to join/view" : "Click PDF to open / download";
+        left.appendChild(title);
+        left.appendChild(sub);
+
+        if(cat === 'discussion'){
+          const linkBtn = document.createElement('a');
+          linkBtn.className = 'link-btn';
+          linkBtn.href = it.link;
+          linkBtn.target = "_blank";
+          linkBtn.rel = "noopener noreferrer";
+          linkBtn.innerHTML = '🔗 Visit Link';
+          wrapper.appendChild(left);
+          wrapper.appendChild(linkBtn);
+        } else {
+          const pdf = document.createElement('a');
+          pdf.className = 'pdf-btn';
+          pdf.href = it.pdf;
+          pdf.target = "_blank";
+          pdf.rel = "noopener noreferrer";
+          pdf.innerHTML = '<span class="icon">📄</span><span>PDF</span>';
+          wrapper.appendChild(left);
+          wrapper.appendChild(pdf);
+        }
+
+        listItemsEl.appendChild(wrapper);
+      });
+
+      contentPlaceholder.classList.add('hidden');
+      listView.classList.remove('hidden');
+    }
+
+    function hideList(){
+      listView.classList.add('hidden');
+      contentPlaceholder.classList.remove('hidden');
+    }
+
+    // Countdown date (27 Nov 2025)
+    const targetDate = new Date(2025, 10, 27, 0, 0, 0);
+    const elDays = document.getElementById('days');
+    const elHours = document.getElementById('hours');
+    const elMinutes = document.getElementById('minutes');
+    const elSeconds = document.getElementById('seconds');
+
+    function pad(n){return String(n).padStart(2,'0');}
+    function updateCountdown(){
+      const now = new Date();
+      let diff = targetDate - now;
+      if(diff <= 0){
+        elDays.textContent = '00'; elHours.textContent='00'; elMinutes.textContent='00'; elSeconds.textContent='00';
+        return;
+      }
+      const msInSec=1000, msInMin=msInSec*60, msInHour=msInMin*60, msInDay=msInHour*24;
+      const days = Math.floor(diff/msInDay); diff%=msInDay;
+      const hours = Math.floor(diff/msInHour); diff%=msInHour;
+      const minutes = Math.floor(diff/msInMin); diff%=msInMin;
+      const seconds = Math.floor(diff/msInSec);
+
+      elDays.textContent = String(days);
+      elHours.textContent = pad(hours);
+      elMinutes.textContent = pad(minutes);
+      elSeconds.textContent = pad(seconds);
+    }
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+  </script>
+  <footer>
+    © 2025 <span>POLA AYYA</span> | Developed with ❤️ | <a href="https://youtube.com/channel/UCzkCCUAdlCaHTOm6l6OiSCw?si=UIq_6BbbuqP_lIuu" target="_blank"><B>ⱽᴵᴾපොලා අයියා Info📍<B></a>
+  </footer>
+</body>
+</html>
